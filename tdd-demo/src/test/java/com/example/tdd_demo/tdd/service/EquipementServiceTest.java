@@ -5,6 +5,8 @@ package com.example.tdd_demo.tdd.service;
 import com.example.tdd_demo.tdd.model.Equipement;
 import com.example.tdd_demo.tdd.repository.EquipementRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -17,7 +19,10 @@ import static org.mockito.Mockito.when;
 public class EquipementServiceTest {
 
     private String nomEquipement = "Ordinateur portable";
-    @Test
+    //@Test
+
+    @ParameterizedTest
+    @ValueSource(strings = {"Ordinateur Portable", "Clavier", "Écran 24 pouces"})
     void enregistrerEquipement_doitRetournerEquipementSauvegarde(){
 
         //Creation d'un mock du repository a l'aide de Mockito
