@@ -1,0 +1,15 @@
+
+/*
+    Effectuer un test unitaire d'une fonctionnalite
+*/
+
+    - Etape1: Red
+        * Creer l'entite
+        * Ecrire un test qui echoue pour un cas d'usage
+
+    - Etape2: Green
+        * Creer le repository et le service du cas d'usage pour faire passer le test
+
+    - Etape3: Refactory
+        * Refactoriser le code (Nettoyer et ameliorer le code)
+        * Relier le service a une requete post
