@@ -15,6 +15,8 @@ import static org.mockito.Mockito.when;
     Classe contenant les tests unitaires pour la classe EquipementService
 */
 public class EquipementServiceTest {
+
+    private String nomEquipement = "Ordinateur portable";
     @Test
     void enregistrerEquipement_doitRetournerEquipementSauvegarde(){
 
@@ -25,7 +27,7 @@ public class EquipementServiceTest {
         EquipementService service = new EquipementService(mockRepo);
 
         //Création d’un objet Equipement à sauvegarder
-        Equipement equipement = new Equipement("Ordinateur portable");
+        Equipement equipement = new Equipement(nomEquipement);
 
         //Definition du comportement du mock
         when(mockRepo.save(equipement)).thenReturn(equipement);
@@ -33,6 +35,6 @@ public class EquipementServiceTest {
         Equipement result = service.enregistrer(equipement);
 
         assertNotNull(result);
-        assertEquals("Ordinateur portable", result.getNom());
+        assertEquals(nomEquipement, result.getNom());
     }
 }
