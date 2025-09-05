@@ -9,4 +9,5 @@ Feature: Enregistrement d'un équipement
       |ordinateurName|
       |DELL          |
       |Lenovo        |
+      |HP            |
 
