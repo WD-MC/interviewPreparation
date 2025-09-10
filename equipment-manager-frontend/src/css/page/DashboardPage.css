@@ -1,0 +1,9 @@
+.equipment{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.equipment--color{
+    color: rgb(240, 192, 34);
+}
