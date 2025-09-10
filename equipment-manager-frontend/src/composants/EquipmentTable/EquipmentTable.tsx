@@ -100,13 +100,13 @@ const EquipmentTable: React.FC<Props> = ({ data, onEdit, onDelete }) => {
           )}
           {filteredData.map((equip) => (
             <tr key={equip.id} className="equipment-list__tr">
-              <td className="equipment-list__td">{equip.id}</td>
-              <td className="equipment-list__td">{equip.name}</td>
-              <td className="equipment-list__td">{equip.brand}</td>
-              <td className="equipment-list__td">{equip.status}</td>
-              <td className="equipment-list__td">{equip.quantity}</td>
-              <td className="equipment-list__td">{equip.category}</td>
-              <td className="equipment-list__td">
+              <td className="equipment-list__td" data-label="ID">{equip.id}</td>
+              <td className="equipment-list__td" data-label="Nom">{equip.name}</td>
+              <td className="equipment-list__td" data-label="Marque">{equip.brand}</td>
+              <td className="equipment-list__td" data-label="Statut">{equip.status}</td>
+              <td className="equipment-list__td" data-label="Quantité">{equip.quantity}</td>
+              <td className="equipment-list__td" data-label="Catégorie">{equip.category}</td>
+              <td className="equipment-list__td" data-label="Actions">
                 <button onClick={() => onEdit(equip.id)} className="equipment-list__btn equipment-list__btn--edit">
                   Modifier
                 </button>
